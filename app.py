@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json
+import logging
 
 app = Flask(__name__)
 
@@ -17,28 +18,23 @@ def calculate():
         return 'Error'
 
     try:
-        for i in range(1, len(data), 2):
+        i = 1
+        while i < len(data):
             operator = data[i]
             operand = data[i + 1]
-        if operator == '+':
-            result += ' + ' + str(operand)
-            result = str(eval(result))
-        elif operator == '-':
-            result += ' - ' + str(operand)
-            result = str(eval(result))
-        elif operator == '*':
-            result += ' * ' + str(operand)
-            result = str(eval(result))
-        elif operator == '%':
-            result += ' % ' + str(operand)
-            result = str(eval(result))
-        else:
-            result = 0
+            if operator == '+':
+                result += ' + ' + str(operand)
+            elif operator == '-':
+                result += ' - ' + str(operand)
+            elif operator == '*':
+                result += ' * ' + str(operand)
+            elif operator == '%':
+                result += ' % ' + str(operand)
+            i += 2
+        result = str(eval(result))
         return result
-    except ValueError:
-        return 'Err'
-    except TypeError:
-        return 'Err'
+    except:
+        return 'Error'
 
 
 def validate_string(s):
@@ -47,4 +43,5 @@ def validate_string(s):
 
 
 if __name__ == '__name__':
-    app.run(debug=True)
+    app.debug = True
+    app.run
