@@ -28,6 +28,7 @@ function sendCalculation() {
         success: function (response) {
             document.getElementById("output").innerHTML = response;
             calc_array = [];
+            current_number = response
         }
     });
 }
