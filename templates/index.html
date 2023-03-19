@@ -5,41 +5,41 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
-    <div id="calculator">
-        <p id="output">0</p>
-        <table>
-            <tr>
-                <td><input type="button" value="7" onclick="updateDisplay('7')"></td>
-                <td><input type="button" value="8" onclick="updateDisplay('8')"></td>
-                <td><input type="button" value="9" onclick="updateDisplay('9')"></td>
-                <td><input type="button" value="+" onclick="appendToArray('+')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="4" onclick="updateDisplay('4')"></td>
-                <td><input type="button" value="5" onclick="updateDisplay('5')"></td>
-                <td><input type="button" value="6" onclick="updateDisplay('6')"></td>
-                <td><input type="button" value="-" onclick="appendToArray('-')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="1" onclick="updateDisplay('1')"></td>
-                <td><input type="button" value="2" onclick="updateDisplay('2')"></td>
-                <td><input type="button" value="3" onclick="updateDisplay('3')"></td>
-                <td><input type="button" value="*" onclick="appendToArray('*')"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="0" onclick="updateDisplay('0')"></td>
-                <td><input type="button" value="." onclick="updateDisplay('.')"></td>
-                <td><input type="button" value="C" onclick="clearData('C')"></td>
-                <td><input type="button" value="%" onclick="appendToArray('%')"></td>
-            </tr>
-            <tr>
-                <td colspan="4"><input type="button" value="=" onclick="sendCalculation()"></td>
-            </tr>
-        </table>
-    </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{
+<div id="calculator">
+    <p id="output">0</p>
+    <table>
+        <tr>
+            <td><input type="button" value="7" onclick="updateDisplay('7')"></td>
+            <td><input type="button" value="8" onclick="updateDisplay('8')"></td>
+            <td><input type="button" value="9" onclick="updateDisplay('9')"></td>
+            <td><input type="button" value="+" onclick="appendToArray('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="updateDisplay('4')"></td>
+            <td><input type="button" value="5" onclick="updateDisplay('5')"></td>
+            <td><input type="button" value="6" onclick="updateDisplay('6')"></td>
+            <td><input type="button" value="-" onclick="appendToArray('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="updateDisplay('1')"></td>
+            <td><input type="button" value="2" onclick="updateDisplay('2')"></td>
+            <td><input type="button" value="3" onclick="updateDisplay('3')"></td>
+            <td><input type="button" value="*" onclick="appendToArray('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="updateDisplay('0')"></td>
+            <td><input type="button" value="." onclick="updateDisplay('.')"></td>
+            <td><input type="button" value="C" onclick="clearData('C')"></td>
+            <td><input type="button" value="%" onclick="appendToArray('%')"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="button" value="=" onclick="sendCalculation()"></td>
+        </tr>
+    </table>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
             url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
-    <script type="text/javascript" src="{{ url_for('static', filename='calculator.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='calculator.js') }}"></script>
 </body>
 </html>
