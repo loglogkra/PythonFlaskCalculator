@@ -7,9 +7,11 @@ function updateDisplay(number) {
 }
 
 function clearData() {
-    calc_array = [];
+    calc_array = []
+    current_number = "";
     document.getElementById("output").innerHTML = "0";
 }
+
 function appendToArray(operator) {
     calc_array.push(parseFloat(current_number));
     calc_array.push(operator);
@@ -23,10 +25,9 @@ function sendCalculation() {
         type: 'POST',
         data: JSON.stringify(calc_array),
         contentType: 'application/json',
-        success: function(response) {
+        success: function (response) {
             document.getElementById("output").innerHTML = response;
-            //calc_array = [];
-            //current_number = "";
+            calc_array = [];
         }
     });
 }
