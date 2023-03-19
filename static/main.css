@@ -1,0 +1,44 @@
+calculator {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 150px;
+    padding: 2%;
+    height: 200px;
+}
+
+tr {
+    height: 40px;
+}
+
+td{
+    padding: 2px;
+}
+
+button {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(245, 204, 204);
+}
+
+#display {
+    height: 100px;
+}
+
+#output {
+    border: 1px solid black;
+    width: 150px;
+    padding-inline: 2px;
+}
