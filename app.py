@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, json
-import logging
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -12,10 +11,10 @@ def calculator():
 @app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.json
-    # prevent unwanted JSON chars
+    # prevent unwanted JSON from frontend
     result = str(data[0])
-    if not validate_string(result):
-        return 'Error'
+    if not validate_input(result):
+        return 'Invalid Input!'
 
     try:
         i = 1
@@ -29,15 +28,15 @@ def calculate():
             elif operator == '*':
                 result += ' * ' + str(operand)
             elif operator == '%':
-                result += ' % ' + str(operand)
+                result += ' / ' + str(operand)
             i += 2
         result = str(eval(result))
         return result
     except:
-        return 'Error'
+        return 'Unknown Exception'
 
 
-def validate_string(s):
+def validate_input(s):
     valid_chars = set("012345789.+-%*")
     return all(char in valid_chars for char in s)
 
