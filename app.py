@@ -37,7 +37,7 @@ def calculate():
 
 
 def validate_input(s):
-    valid_chars = set("012345789.+-%*")
+    valid_chars = set("0123456789.+-%*")
     return all(char in valid_chars for char in s)
 
 
