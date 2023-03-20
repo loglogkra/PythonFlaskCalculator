@@ -7,3 +7,4 @@ A very basic calculator that mimics the 'standard' mac/windows calculator using 
 -Encode all passthrough from frontend<->backend</br>
 -TLS/HTTS ssl</br>
 -CSRF Protection</br>
+-Add Logging & unit tests using pytest
