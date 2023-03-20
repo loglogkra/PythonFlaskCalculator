@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
-
+4. Your server should be running - navigate to http://127.0.0.1:5000 or localhost:5000</br>
 ## Feature requests & Enancements before production
 - [ ] The rendering is very basic and only uses an HTML table with minimal CSS. Using a framework would enhance UX/UI.</br>
 - [ ] Prevent the user from entering too many operations which could cause an overflow.</br>
